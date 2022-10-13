@@ -1,1 +1,1 @@
-web: gunicorn BostonHousePricesFlaskApp:app --log-file -
+web: gunicorn BostonHousePrices_FlaskApp:app
