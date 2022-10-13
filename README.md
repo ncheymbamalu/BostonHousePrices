@@ -12,7 +12,7 @@
 
 #### Option 1:
 ```
-conda create -p venv python==3.7 -y
+conda create -p venv python==3.10 -y
 ```
 followed by,  
 ```
@@ -21,7 +21,7 @@ conda activate venv/
 
 #### Option 2: 
 ```
-pyenv install 3.7.13
+pyenv install 3.10.5
 ```
 followed by, 
 ```
