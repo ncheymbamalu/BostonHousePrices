@@ -1,0 +1,1 @@
+web: gunicorn BostonHousePrices_app:app --log-file -
