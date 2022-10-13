@@ -48,10 +48,10 @@ def predict_api():
     print(record)
 
     # convert the 'record' NumPy array to a Pandas DataFrame
-    record = pd.DataFrame(record, columns=features)
+    df_record = pd.DataFrame(record, columns=features)
 
     # standardize the 'record' DataFrame by calling the 'scaler' object
-    record_scaled = scaler.transform(record)
+    record_scaled = scaler.transform(df_record)
 
     # make a prediction on the 'record_scaled' NumPy array by calling the 'linreg_model' object
     prediction = np.round(linreg_model.predict(record_scaled), 4)
@@ -76,10 +76,10 @@ def predict():
     # 1) convert the 'record' list to a NumPy array
     # 2) reshape the NumPy array to (1, D), where D is the number of features
     # 3) convert the (1, D) NumPy array to a DataFrame and set the 'columns' parameter equal to the 'features' list
-    record = pd.DataFrame(np.array(record).reshape(1, -1), columns=features)
+    df_record = pd.DataFrame(np.array(record).reshape(1, -1), columns=features)
 
     # standardize the 'record' DataFrame by calling the 'scaler' object
-    record_scaled = scaler.transform(record)
+    record_scaled = scaler.transform(df_record)
 
     # make a prediction on the 'record_scaled' NumPy array by calling the 'linreg_model' object
     prediction = linreg_model.predict(record_scaled)[0]
